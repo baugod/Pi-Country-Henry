@@ -1,9 +1,9 @@
-import axios from "./axios.js";
+import axios from 'axios';
 import { getAllCountries, getCountryById, getCountryByName, getCountryByRegion } from "./countrySlice.js";
 
 export async function apiAllCountry(dispatch){
     try{
-        const peticion = await axios.get('/country');
+        const peticion = await axios.get('http://localhost:3001/country');
         dispatch(getAllCountries(peticion?.data));
         return;
     } catch (error){
@@ -13,7 +13,7 @@ export async function apiAllCountry(dispatch){
 
 export async function apiCountryByName(dispatch, name){
     try{
-        const peticion = await axios.get(`/country/name?name=${name}`);
+        const peticion = await axios.get(`http://localhost:3001/country/name?name=${name}`);
         dispatch(getCountryByName(peticion?.data));
         return;
     } catch (error){
@@ -23,7 +23,7 @@ export async function apiCountryByName(dispatch, name){
 
 export async function apiCountryByRegion(dispatch, region){
     try{
-        const peticion = await axios.get(`/country/region?region=${region}`);
+        const peticion = await axios.get(`http://localhost:3001/country/region?region=${region}`);
         dispatch(getCountryByRegion(peticion?.data));
         return;
     } catch (error) {
@@ -33,7 +33,7 @@ export async function apiCountryByRegion(dispatch, region){
 
 export async function apiCountryById(dispatch, id){
     try {
-        const peticion = await axios.get(`/country/id/${id}`);
+        const peticion = await axios.get(`http://localhost:3001/country/id/${id}`);
         dispatch(getCountryById(peticion?.data));
         return;
     } catch (error) {
@@ -43,7 +43,7 @@ export async function apiCountryById(dispatch, id){
 
 export async function apiCountryByActivity(dispatch){
     try {
-         peticion = await axios.get("/country");
+         const peticion = await axios.get(`http://localhost:3001/country`);
          const aux = peticion.data;
          const aux1 = aux.filter((e)=> e.activities.length !== 0);
          dispatch (getAllCountries(aux1));
