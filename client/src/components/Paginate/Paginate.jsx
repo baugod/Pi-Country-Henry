@@ -28,7 +28,7 @@ const Paginate = ({ page, setPage, max }) => {
     setInput(e.target.value)
   }
   return (
-    <div className="container">
+    <div className="containerPaginate">
       <button disabled={page===1||page<1} className="prevB"
       onClick={backPage}>
         <svg

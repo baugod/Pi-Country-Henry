@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Cards.Style.css"
 import Paginate from "../Paginate/Paginate";
-
+import Loader from "../loader/loader.jsx";
 
 export default function Cards() {
  
@@ -14,10 +14,12 @@ export default function Cards() {
 
     const max = allCountries.length / perPage;
 
+    if(!allCountries.length) {
+        return <Loader />
+    } else {
     return(
         <>
-        <div className="fondo">
-
+        <div>
           <div className="countryContainer">
             {allCountries?.slice((page -1) * perPage, (page -1) * perPage + perPage).map((country) => (
                 <Link to={`/country/id/${country.id}`} key={country.id}>
@@ -47,3 +49,4 @@ export default function Cards() {
         </>
     );
 };
+}

@@ -4,7 +4,7 @@ import './landingPage.Style.css';
 
 export function LandingPage() {
     return (
-        <div className="landing">
+        <div>
             <h1 className="wlc">WELCOME TO MY WORLD</h1>
             <Link to='/home' className="buttonDiv">
                 <button className="buttonLanding">START!</button>

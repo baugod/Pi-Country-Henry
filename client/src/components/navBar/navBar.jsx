@@ -20,13 +20,14 @@ export default function Navbar() {
                 <div>
                 <SearchBar onSearch={getCountryByName}/>
                 </div>
-                <div className='title'>Countries of the world</div>
+                <div className='title'>COUNTRIES OF THE WORLD</div>
             <nav>
                 <ul className="list">
                     <li className="list-item">
-                        <Link to="/home" >All Countries
+                        <Link to="/home" >HOME
                         </Link>
-                        <Link to="/recipe" >Create new Activity</Link>
+                        <Link to="/createActivity">CREATE ACTIVITY</Link>
+                        <Link to="/about" >ABOUT</Link>
                     </li>
                 </ul>
             </nav>

@@ -1,33 +1,37 @@
 import Cards from "../../components/Cards/Cards.jsx";
-import Navbar from "../../components/navBar/navBar.jsx";
-import FilterRegion from "../../components/filterAndOrder/filterByRegion.jsx";
 import FilterActivity from "../../components/filterAndOrder/filterBySeasonActivity.jsx";
-import { apiCountryByRegion, apiCountryByActivity } from "../../redux/apiPetitions.js";
+import { apiCountryByActivity, apiCountryByRegion } from "../../redux/apiPetitions.js";
 import { useDispatch } from "react-redux";
-
+import Sort from "../../components/filterAndOrder/sort.jsx";
+//import FilterContinent from "../../components/filterAndOrder/filterByContinent.jsx";
+import FilterContinents from "../../components/filterAndOrder/filterByContinent.jsx";
+import "./home.Style.css";
 
 
 
 export default function Home() {
   const dispatch = useDispatch();
-  const getCountryByRegion = async (countryRegion) =>{
-    apiCountryByRegion(dispatch, countryRegion);
-  };
+  
   const getActivityBySeason = async (season) => {
     apiCountryByActivity(dispatch, season);
+  };
+  const getCountryByRegion = async (countryRegion) => {
+    apiCountryByRegion(dispatch, countryRegion);
   };
 
     return (
         <>
         <div>
-          <div>
-            <Navbar />
-          </div>
-          <div>
-            <FilterRegion onSearch={getCountryByRegion} />
-          </div>
-          <div>
-            <FilterActivity onSearch={getActivityBySeason} />
+          <div className="containerFyS">
+            <div>
+            <h3 className="titleSyF">ORDER FROM: </h3>
+            <Sort />
+            </div>
+             <div>
+            <h3 className="titleSyF">FILTER BY: </h3>
+            <FilterActivity onSelect={getActivityBySeason} />
+            <FilterContinents onSelect={getCountryByRegion}/>
+            </div>
           </div>
           <div>
             <Cards />

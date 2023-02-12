@@ -1,0 +1,49 @@
+.containerBlock{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerForm{
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+    height: 740px;
+    width: 800px;
+    color: #fff;
+}
+.inputPost{
+    height: 37px;
+    width: 300px;
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+.titleNew {
+    font-size: 2em;
+}
+
+.titlesPost{
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size:2vw;
+}
+
+.buttonSubmit {
+    height: 50px;
+    width: 150px;
+    margin-top: 60px;
+    font-size: 20px;
+    border-radius: 10px;
+    border-color: black;
+}
+
+.buttonSubmit:hover {
+    color:antiquewhite;
+    background-color: black;
+}

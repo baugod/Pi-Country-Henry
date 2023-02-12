@@ -1,23 +1,12 @@
-.landing{
-    background-image: url('../../components/images/earth\ con\ manos.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -150px;
-    bottom: 0px;
-    right: 0;
-    left: 0;
-}
-
  .wlc {
      text-align: center; 
     font-family: Arial Black; 
     font-weight: bold;
     align-items: center;
-    max-width: 40%; 
+    max-width: 43%; 
     font-size: 80px;
-    margin-top: 300px;
-    padding-left: 190px; 
+    margin-top: 200px;
+    padding-left: 290px; 
     color: #fff; 
     text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
 } 

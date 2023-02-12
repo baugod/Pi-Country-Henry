@@ -1,4 +1,5 @@
 import React from "react";
+import "./selects.Style.css";
 
 const FilterActivity = ({ onSelect }) => {
     const selectHandler = (e) => {
@@ -8,19 +9,19 @@ const FilterActivity = ({ onSelect }) => {
     };
 
     return (
-        <select onChange={selectHandler}>
-          <option className="option" value=''>Filter by Season Activities</option>
-          <option className="option" value="VERANO">
-            Verano
+        <select className="selectStyle" onChange={selectHandler}>
+          <option className="option" value=''>SEASON ACTIVITIES</option>
+         <option className="option" value="SPRING">
+            SPRING
           </option>
-          <option className="option" value="OTOÑO">
-            Otoño
+          <option className="option" value="SUMMER">
+            SUMMER
           </option>
-          <option className="option" value="INVIERNO">
-            Invierno
+          <option className="option" value="FALL">
+            FALL
           </option>
-          <option className="option" value="PRIMAVERA">
-            Primavera
+          <option className="option" value="WINTER">
+            WINTER
           </option>
           
         </select>

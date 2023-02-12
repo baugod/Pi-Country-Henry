@@ -1,23 +1,24 @@
-.container{
+.containerPaginate{
     display: flex;
+    height: 100%;
+    width: 100%;
     margin-top: 15px;
     margin-bottom: 3%;
-    height: 100%;
+    justify-content: center;
 
 }
 .inputC {
     width: 60px;
+    
 }
 .prevB{
     background-color:black;
     color: antiquewhite;
     border: none;
-    width: 50px;
 }
 .nextB{
     background-color: black;
     color: antiquewhite;
     border: none;
     margin-left: 10px;
-    width: 50px;
 }

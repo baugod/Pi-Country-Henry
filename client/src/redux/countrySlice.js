@@ -25,10 +25,32 @@ const countrySlice = createSlice({
         },
         getCountryById(state, action){
             state.countryId = action.payload
+        },
+        sortByAsc(state, {payload}){
+            const sortedName = payload === 'asc' ?
+            state.countriesFilter.sort((a,b) => {
+                if(a.name.toLowerCase() > b.name.toLowerCase()){
+                    return 1 ;
+                }
+                if(b.name.toLowerCase() > a.name.toLowerCase()) {
+                    return -1;
+                }
+                return 0 ;
+            }) : 
+            state.countriesFilter.sort((a,b)=> {
+                if(a.name.toLowerCase() > b.name.toLowerCase()){
+                    return - 1;
+                }
+                if(b.name.toLowerCase() > a.name.toLowerCase()) {
+                    return 1;
+                }
+                return 0
+            })
+            state.countriesFilter = sortedName;
         }
     }
 });
 
-export const { getAllCountries, getCountryById, getCountryByName, getCountryByRegion } = countrySlice.actions;
+export const { getAllCountries, getCountryById, getCountryByName, getCountryByRegion, sortByAsc } = countrySlice.actions;
 
 export default countrySlice.reducer;

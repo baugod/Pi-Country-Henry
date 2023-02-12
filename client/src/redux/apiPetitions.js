@@ -54,7 +54,7 @@ export async function apiCountryByActivity(dispatch){
 }
 
 export async function apiPostActivities(activities){
-    return await axios.post(`/createActivity`, {
+    return await axios.post(`http://localhost:3001/createActivity`, {
         ...activities,
         name: activities.name,
         duration: activities.duration,

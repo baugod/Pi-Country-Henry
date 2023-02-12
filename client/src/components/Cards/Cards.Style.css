@@ -27,16 +27,19 @@
   }
 
   .countryContainer {
+
     width: 80%;
     height: 100%;
-    margin-left: 20px;
+    margin-left: 120px;
     display:flex;
     flex-wrap: wrap;
-    justify-content:left;
+    justify-content:center;
     align-items:center;
-    padding-top: 180px;
+    padding: 2em;
+    padding-top: 0px;
     column-gap: 2rem;
     row-gap: 2rem;
+    margin-bottom: 0;
   }
 
   .imgContainer{
@@ -91,11 +94,16 @@
 
   .paginateContainer {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
+    margin-top: -20px;
   }
   
-  .fondo{
+  .prueba{
+    background-color: aqua;
+  }
+  /* .fondo{
     background-image: url('../../components/images/earth\ con\ manos.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -104,4 +112,4 @@
     bottom: 0px;
     right: 0;
     left: 0;
-  }
+  } */

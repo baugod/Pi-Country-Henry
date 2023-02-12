@@ -1,0 +1,30 @@
+.containerFyS{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding-top: 0;
+
+}
+
+.titleSyF{
+margin-bottom: 0;
+font-size: 20px;
+}
+
+.filters {
+background-color: aqua;
+}
+
+.sorts {
+display: flex;
+align-items: center;
+justify-content:center;
+width: 50%;
+height: 50px;
+margin-top: 70px;
+
+
+}
