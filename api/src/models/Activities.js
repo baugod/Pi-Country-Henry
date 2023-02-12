@@ -13,11 +13,7 @@ const Activities = dataBase.define("activities",
         allowNull: false
     },
     difficulty:{
-        type: DataTypes.INTEGER,
-        validate: {
-            min: 1,
-            max: 5
-        },
+        type: DataTypes.STRING,
         allowNull: false
     },
     duration:{
@@ -25,7 +21,7 @@ const Activities = dataBase.define("activities",
         allowNull: false
     },
     season: {
-        type: DataTypes.ENUM("SPRING","SUMMER", "FALL","WINTER"),
+        type: DataTypes.STRING,
         allowNull: false
     }
 }, {timestamps: false});

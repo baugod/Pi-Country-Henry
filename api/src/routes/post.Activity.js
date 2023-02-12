@@ -1,8 +1,8 @@
 import { Router } from "express";
-import {createActivity} from "../helpers/helpers.Created.js"
+import { postActivity } from "../controller/controller.Created.js";
 
 const post = Router();
 
-post.get("/", createActivity);
+post.post("/", postActivity);
 
 export default post;

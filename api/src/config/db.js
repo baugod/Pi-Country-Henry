@@ -15,5 +15,4 @@ const dataBase = new Sequelize(
   }
 )
 
-
 export default dataBase;

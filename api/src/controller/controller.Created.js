@@ -1,17 +1,11 @@
-import {createActivity} from "../helpers/helpers.Created";
+import createActivity from "../helpers/helpers.Created.js";
 
 export async function postActivity(req, res){
-    const{
-        name,
-        duration,
-        difficulty,
-        season,
-        countryId
-    } = req.body;
     try{
-        const response = await createActivity(name, duration, difficulty, season, countryId);
-        return res.status(200).json(response)
-    } catch {
-        return res.send(error.message)
+        const newActivity = await createActivity(req);
+        
+        return res.status(200).json(newActivity)
+    } catch (error) {
+        return res.status(400).json({err: error.message})
     };
 }

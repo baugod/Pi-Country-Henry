@@ -1,18 +1,27 @@
 import Activities from "../models/Activities.js";
+import countries from "../models/Country.js";
 
-export async function createActivity(
+const createActivity = async (req) => {
+  const { name, difficulty, duration, season, countryId} = req.body;
+
+  const newActivity = await Activities.create({
     name,
-    duration,
     difficulty,
-    season,
-    countryId
-  ) {
-    const postActivity = await Activities.create({
-      name,
-      duration,
-      difficulty,
-      season,
-      countryId,
+    duration,
+    season
+  });
+
+  console.log(req);
+
+  countryId.map(async (id) => {
+    const country = await countries.findAll({
+      where: {
+        id: id,
+      }
     });
-    return postActivity;
-  }
+    newActivity.addCountry(country);
+  })
+}
+
+export default createActivity;
+  

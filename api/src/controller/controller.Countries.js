@@ -5,7 +5,7 @@ export async function getCountries(req, res){
         const response = await getAllCountries();
         return res.status(200).json(response);
     } catch {
-        return re.statys(400).json({err: error.message});
+        return res.status(400).json({err: error.message});
     }
 };
 

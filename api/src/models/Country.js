@@ -26,6 +26,10 @@ const countries= dataBase.define('countries', {
   subregion:{
     type: DataTypes.STRING,
     allowNull: false,
+  },
+   population:{
+    type:DataTypes.STRING,
+    allowNull: false,
   }
 }, {timestamps: false})
 
