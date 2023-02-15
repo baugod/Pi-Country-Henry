@@ -7,30 +7,26 @@ export default function DetailCountry() {
  const { countryId } = useParams();
  const [country, setCountry] = useState(null); 
  const navigate = useNavigate();
-
- console.log(country.activities[0]);
-
+ 
  useEffect(()=> {
-  axios
+     axios
      .get(`http://localhost:3001/country/id/${countryId}`)
      .then((e)=> setCountry(e.data))
      .catch((err) => { return err })
     }, [countryId, navigate]);
     
-   // console.log(e.data[0])
-   
+    
 
   
-//      const activitiesId = country.activities?.map( e => {
-//        return {
-//            name: e.name,
-//            duration: e.duration,
-//            difficulty: e.difficulty,
-//            season: e.season
-//        }
-//    });
-
-  //console.log(activitiesId);
+       const activitiesId = country?.activities.map( e => {
+         return {
+             name: e.name,
+             duration: e.duration,
+             difficulty: e.difficulty,
+             season: e.season
+         }
+     });
+//console.log(activitiesId)
 
  return (
     <>
@@ -57,19 +53,22 @@ export default function DetailCountry() {
                 </div>
             </div>
                 </div>
-                       {/* <div className="">
-                    <h3>ACTIVITIES:</h3>
+                <div className="containerAct">
+                    <h3 className="titleAct">ACTIVITIES:</h3>
+                         <div className="containerActivities">
                     <span>{activitiesId?.length > 0 ? activitiesId.map( e => {
                         return (
                             <div key={e.id}>
-                                <p>Name: {e.name}</p>
-                                <p>Duration: {e.duration}</p>
-                                <p>Difficulty: {e.difficulty}</p>
-                                <p>Season: {e.season}</p>
+                                <p>NAME: {e.name}</p>
+                                <p>DURATION: {e.duration}</p>
+                                <p>DIFFICULTY: {e.difficulty}</p>
+                                <p>SEASON: {e.season}</p>
                             </div>
                         )
-                    }) : <p>No activities created</p> }</span>
-                    </div>   */}
+                    }) : <h1>No activities created</h1>
+                          }</span>
+                    </div>
+                    </div>   
         </div>
         </div>
     </>

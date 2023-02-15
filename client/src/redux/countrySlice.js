@@ -47,10 +47,30 @@ const countrySlice = createSlice({
                 return 0
             })
             state.countriesFilter = sortedName;
+        },
+        sortByPop(state, {payload}) {
+            const sortedPop = payload === 'asc' ? 
+            state.countriesFilter.sort((a,b) => {
+                if(a.population > b.population) {
+                    return 1 };
+                if(b.population > a.population) {
+                    return -1 };
+                return 0;
+            }) :
+            state.countriesFilter.sort((a,b) => {
+                if(a.population > b.population){
+                    return -1;
+                }
+                if(b.population > a.population){
+                    return 1;
+                }
+                return 0;
+            })
+                state.countriesFilter = sortedPop ;
         }
     }
 });
 
-export const { getAllCountries, getCountryById, getCountryByName, getCountryByRegion, sortByAsc } = countrySlice.actions;
+export const { getAllCountries, getCountryById, getCountryByName, getCountryByRegion, sortByAsc, sortByPop } = countrySlice.actions;
 
 export default countrySlice.reducer;

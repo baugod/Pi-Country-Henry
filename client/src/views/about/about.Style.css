@@ -1,0 +1,94 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  .aboutInfo {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: aliceblue;
+    border-radius: 1rem;
+    padding: 10px;
+  }
+  
+  .aboutInfo h1 {
+    font-size: 60px;
+  }
+  
+  .aboutInfo p {
+    font-size: 20px;
+  }
+  .aboutInfo p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-principal);
+  }
+  
+  .TechTitle {
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+    text-decoration: underline;
+  }
+  .techContainer {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .techContainer div {
+    width: 150px;
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1px;
+    padding-bottom: 10px;
+    justify-content: center;
+    transition: all 500ms;
+  }
+  .techContainer div:hover{
+      transform: scale(1.05);
+  }
+  .techContainer div img {
+    border-radius: 1rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 90%;
+  }
+  .techContainer div h1 {
+    font-size: 20px;
+  }
+  .redes_sociales{
+      width: 90%;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      gap:100px;
+  }
+  .redes_sociales a img{
+    width: 60px;
+  }
+  .redes_sociales a:hover{
+      text-decoration: none;
+      transition: all 500ms;
+      transform: scale(1.1);
+  }
+  

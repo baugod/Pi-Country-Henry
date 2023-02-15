@@ -11,16 +11,16 @@ const FilterActivity = ({ onSelect }) => {
     return (
         <select className="selectStyle" onChange={selectHandler}>
           <option className="option" value=''>SEASON ACTIVITIES</option>
-         <option className="option" value="SPRING">
+         <option className="option" value="Spring">
             SPRING
           </option>
-          <option className="option" value="SUMMER">
+          <option className="option" value="Summer">
             SUMMER
           </option>
-          <option className="option" value="FALL">
+          <option className="option" value="Fall">
             FALL
           </option>
-          <option className="option" value="WINTER">
+          <option className="option" value="Winter">
             WINTER
           </option>
           

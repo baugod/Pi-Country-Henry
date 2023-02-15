@@ -47,3 +47,11 @@
     color:antiquewhite;
     background-color: black;
 }
+
+.error{
+    color:aliceblue;
+    font-size: 13px;
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+}
