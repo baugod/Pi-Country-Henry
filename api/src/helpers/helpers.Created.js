@@ -11,7 +11,7 @@ const createActivity = async (req) => {
     season
   });
 
-  console.log(req);
+  console.log(req.body);
 
   countryId.map(async (id) => {
     const country = await countries.findAll({
